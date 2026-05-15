@@ -1,0 +1,545 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    background-color: whitesmoke;
+}
+
+/* middel */
+
+.middel {
+    margin: 2% 5% 0 5%;
+}
+
+.tl {
+    margin-top: 3%;
+}
+
+.tl h1 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.tl p {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.inv-main {
+    display: flex;
+    margin-top: 5%;
+    width: 100%;
+}
+
+/* inv-left */
+.inv-left {
+    width: 30%;
+}
+
+.ord-no h2 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.ord-no p {
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.date h2 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.date p {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.addr {
+    width: 68%;
+}
+
+.addr h2 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.addr p {
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0 0 8px 10px;
+}
+
+
+/* inv-right */
+
+.inv-right {
+    width: 70%;
+}
+
+/* prod-top */
+
+.prod-top {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 2px solid lightgray;
+    font-weight: bold;
+}
+
+.tit1,
+.tit2,
+.tit3,
+.tit4 {
+    flex: 1;
+    text-align: center;
+}
+
+/* .tit1 {
+    flex: 1.2;
+} */
+
+/* Product Row */
+.prod-bot {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.prod-oid,
+.prod-name,
+.prodq,
+.prod-price {
+    flex: 1;
+    text-align: center;
+}
+
+.prod-oid {
+    flex: 1.2;
+}
+
+.pimg {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.pimg img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+}
+
+.prod-name p,
+.prod-oid p,
+.prodq p,
+.prod-price p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.total {
+    margin: 2% 1% 0 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tot-left p {
+    font-size: 20px;
+}
+
+.tot-right p {
+    font-size: 20px;
+}
+
+.back {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.back a {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+    .inv-main {
+        display: flex;
+    }
+
+    .inv-left {
+        width: 30%;
+    }
+
+    .tl h1 {
+        font-size: 20px;
+    }
+
+    .tl p {
+        font-size: 15px;
+        margin-top: 0%;
+    }
+
+    /* inv-left */
+    .ord-no h2 {
+        font-size: 10px;
+    }
+
+    .ord-no p {
+        margin-left: 0px;
+        font-size: 8px;
+    }
+
+    .date h2 {
+        font-size: 10px;
+    }
+
+    .date p {
+        margin-left: 0px;
+        font-size: 8px;
+    }
+
+    .addr h2 {
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .addr p {
+        text-align: justify;
+        margin-left: 0px;
+        font-size: 8px;
+        line-height: 1;
+        padding: 0;
+        margin: 0 0 4px 0px;
+    }
+
+    /* inv-right */
+    .inv-right {
+        width: 70%;
+    }
+
+    .prod-top p {
+        font-size: 10px;
+    }
+
+    .pimg img {
+        height: 30px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .prod-name p,
+    .prod-oid p,
+    .prodq p,
+    .prod-price p {
+        font-size: 8px;
+        margin: 0;
+    }
+
+    .tot-left p {
+        margin: 0;
+        padding: 0;
+        font-size: 8px;
+    }
+
+    .tot-right p {
+        padding: 0;
+        margin: 0;
+        font-size: 8px;
+    }
+
+    .back a {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:768px) {
+
+    .inv-main {
+        display: flex;
+    }
+
+    .inv-left {
+        width: 30%;
+    }
+
+    .tl h1 {
+        font-size: 21px;
+    }
+
+    .tl p {
+        font-size: 15px;
+        margin-top: 0%;
+    }
+
+    /* inv-left */
+    .ord-no h2 {
+        font-size: 11px;
+    }
+
+    .ord-no p {
+        margin-left: 0px;
+        font-size: 9px;
+    }
+
+    .date h2 {
+        font-size: 11px;
+    }
+
+    .date p {
+        margin-left: 0px;
+        font-size: 9px;
+    }
+
+    .addr h2 {
+        font-size: 11px;
+        font-weight: 500;
+    }
+
+    .addr p {
+        text-align: justify;
+        margin-left: 0px;
+        font-size: 9px;
+        line-height: 1;
+        padding: 0;
+        margin: 0 0 4px 0px;
+    }
+
+    /* inv-right */
+    .inv-right {
+        width: 70%;
+    }
+
+    .prod-top p {
+        font-size: 11px;
+    }
+
+    .pimg img {
+        height: 30px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .prod-name p,
+    .prod-oid p,
+    .prodq p,
+    .prod-price p {
+        font-size: 9px;
+        margin: 0;
+    }
+
+    .tot-left p {
+        margin: 0;
+        padding: 0;
+        font-size: 9px;
+    }
+
+    .tot-right p {
+        padding: 0;
+        margin: 0;
+        font-size: 9px;
+    }
+
+    .back a {
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width:1024px) {
+
+    .inv-main {
+        display: flex;
+    }
+
+    .inv-left {
+        width: 30%;
+    }
+
+    .tl h1 {
+        font-size: 22px;
+    }
+
+    .tl p {
+        font-size: 16px;
+        margin-top: 0%;
+    }
+
+    /* inv-left */
+    .ord-no h2 {
+        font-size: 12px;
+    }
+
+    .ord-no p {
+        margin-left: 0px;
+        font-size: 10px;
+    }
+
+    .date h2 {
+        font-size: 12px;
+    }
+
+    .date p {
+        margin-left: 0px;
+        font-size: 10px;
+    }
+
+    .addr h2 {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .addr p {
+        text-align: justify;
+        margin-left: 0px;
+        font-size: 10px;
+        line-height: 1;
+        padding: 0;
+        margin: 0 0 4px 0px;
+    }
+
+    /* inv-right */
+    .inv-right {
+        width: 70%;
+    }
+
+    .prod-top p {
+        font-size: 12px;
+    }
+
+    .pimg img {
+        height: 35px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .prod-name p,
+    .prod-oid p,
+    .prodq p,
+    .prod-price p {
+        font-size: 10px;
+        margin: 0;
+    }
+
+    .tot-left p {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+    }
+
+    .tot-right p {
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .back a {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (min-width:1025px) and (max-width:1200px) {
+
+    .inv-main {
+        display: flex;
+    }
+
+    .inv-left {
+        width: 30%;
+    }
+
+    .tl h1 {
+        font-size: 24px;
+    }
+
+    .tl p {
+        font-size: 18px;
+        margin-top: 0%;
+    }
+
+    /* inv-left */
+    .ord-no h2 {
+        font-size: 14px;
+    }
+
+    .ord-no p {
+        margin-left: 0px;
+        font-size: 12px;
+    }
+
+    .date h2 {
+        font-size: 12px;
+    }
+
+    .date p {
+        margin-left: 0px;
+        font-size: 12px;
+    }
+
+    .addr h2 {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .addr p {
+        text-align: justify;
+        margin-left: 0px;
+        font-size: 12px;
+        line-height: 1;
+        padding: 0;
+        margin: 0 0 4px 0px;
+    }
+
+    /* inv-right */
+    .inv-right {
+        width: 70%;
+    }
+
+    .prod-top p {
+        font-size: 14px;
+    }
+
+    .pimg img {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .prod-name p,
+    .prod-oid p,
+    .prodq p,
+    .prod-price p {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .tot-left p {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+
+    .tot-right p {
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .back a {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+}

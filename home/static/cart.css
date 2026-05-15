@@ -1,0 +1,1470 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    background-color: whitesmoke;
+}
+
+/* Navbar  */
+.nav {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.nav a:hover {
+    opacity: 0.4;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+.nav-left {
+    margin-top: 17px;
+    margin-left: 10px;
+    display: flex;
+}
+
+.nav-left a img {
+    width: 100%;
+    height: 45px;
+}
+
+
+.nav-right {
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+.nav-right a {
+
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.bar-icon {
+    display: none;
+}
+
+/* middel */
+
+.middel {
+    margin: 2% 5% 0 5%;
+}
+
+.cart {
+    display: flex;
+}
+
+.cart-det {
+    width: 100%;
+}
+
+.cart-left {
+    width: 65%;
+}
+
+.cartl-he h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.cartl-prod {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartp-left {
+    width: 65%;
+    display: flex;
+}
+
+.cartl-img img {
+    width: 220px;
+    height: 230px;
+}
+
+.cartl-detail {
+    margin-left: 2%;
+}
+
+.name-can {
+    width: 100%;
+}
+
+.name-can h2 {
+    margin-top: 8%;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.name-can p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cartl-cata {
+    margin-top: 25px;
+    display: flex;
+}
+
+.size,
+.width {
+    line-height: 0.5;
+}
+
+.size p {
+    font-size: 20px;
+}
+
+.size select {
+    padding: 4px 8px;
+}
+
+.width p {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.width select {
+    margin-left: 20px;
+    padding: 4px 8px;
+}
+
+.qp {
+    margin-top: 40px;
+    display: flex;
+}
+
+.cartl-qty {
+    display: flex;
+}
+
+.qmin button {
+    border: none;
+    background-color: #F1F1F1;
+    border-radius: 5px;
+    padding: 2px 8px;
+}
+
+.qno {
+    margin-left: 10px;
+}
+
+.qno {
+    font-size: 18px;
+}
+
+.qmax {
+    margin-left: 10px;
+}
+
+.qmax button {
+    border: none;
+    background-color: #F1F1F1;
+    border-radius: 5px;
+    padding: 2px 8px;
+}
+
+
+.cartp-right {
+    width: 35%;
+}
+
+.can {
+    margin-top: 1%;
+    margin-left: 30px;
+}
+
+.can button {
+    font-size: 20px;
+    border: none;
+    background-color: #F1F1F1;
+    border-radius: 5px;
+    padding: 2px 8px;
+}
+
+.r-bot {
+    margin-top: 135px;
+}
+
+.r-bot p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+.cart-right {
+    width: 25%;
+    height: 350px;
+    margin-top: 2%;
+    margin-left: 0%;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.ord-titel h2 {
+    margin-top: 2%;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.ord-total {
+    margin-top: 50px;
+    display: flex;
+    margin-left: 5%;
+}
+
+.tot-left p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tot-right {
+    margin-left: 50%;
+}
+
+.tot-right p {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.check {
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.check button {
+    width: 90%;
+    padding: 4px 0px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid #66667A;
+}
+
+.check button:hover {
+    background-color: #F1F1F1;
+}
+
+/* footer */
+.footer {
+    background-color: white;
+    margin-top: 3%;
+}
+
+.f-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 5%;
+    gap: 40px;
+}
+
+.footer-left {
+    width: 25%;
+}
+
+.footer-center1 {
+    width: 20%;
+}
+
+.footer-right {
+    width: 20%;
+}
+
+.fleft-logo img {
+    width: 35%;
+}
+
+.fleft-text {
+    margin-top: 20px;
+}
+
+.fleft-text p {
+    font-size: 18px;
+    color: #66667A;
+    line-height: 1.5;
+}
+
+.fcenter1-text h2,
+.fright-text h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid gray;
+}
+
+.fcenter1-text p {
+    line-height: 1.8;
+    font-size: 18px;
+    color: #66667A;
+    font-weight: 500;
+}
+
+.footer-right {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.footer-center1 {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.fright-icon {
+    display: flex;
+    gap: 15px;
+}
+
+.fright-icon i {
+    font-size: 25px;
+    color: #66667A;
+}
+
+.f-bottem {
+    margin-top: 20px;
+    border-top: 1px solid rgb(163, 163, 163);
+    padding: 10px;
+}
+
+.f-bottem p {
+    text-align: center;
+    font-size: 18px;
+    color: #66667A;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .f-top{
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-center1,
+    .footer-right{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+
+    .nav {
+        height: 40px;
+    }
+
+    .nav-left {
+        margin-top: 6px;
+        margin-left: 7px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 25px;
+    }
+
+    .nav-right {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .nav-right a {
+        font-size: 15px;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .bar-icon {
+        padding: 7px;
+        display: block;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+    /* middel */
+    .middel {
+        margin: 5% 5% 0 5%;
+    }
+
+    .cartl-he h2 {
+        font-size: 15px;
+    }
+
+    .cartl-prod {
+        margin-top: 10px;
+    }
+
+    .cartl-img img {
+        width: 25vw;
+        height: inherit;
+    }
+
+    .cartl-detail {
+        margin-left: 10px;
+    }
+
+    .name-can h2 {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .name-can p {
+        font-size: 8px;
+    }
+
+    .size,
+    .width {
+        line-height: 0;
+    }
+
+    .size p {
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cartl-cata {
+        height: 1vh;
+        margin-top: 0px;
+    }
+
+    .size select {
+        margin-top: 8px;
+        height: 3vh;
+        width: 8vw;
+        font-size: 8px;
+        padding: 0px 0px;
+    }
+
+    .width p {
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+        margin-left: 10px;
+    }
+
+    .width select {
+        margin-left: 10px;
+        margin-top: 8px;
+        height: 3vh;
+        width: 18vw;
+        font-size: 8px;
+        padding: 0px 0px;
+    }
+
+    .qp {
+        margin-top: 20px;
+    }
+
+    .qmin button {
+        font-size: 8px;
+        padding: 1px 4px;
+    }
+
+    .qno {
+        margin-left: 5px;
+    }
+
+    .qno {
+        padding-top: 8px;
+        font-size: 8px;
+    }
+
+    .qmax {
+        margin-left: 5px;
+    }
+
+    .qmax button {
+        font-size: 8px;
+        padding: 1px 4px;
+    }
+
+    .r-top {
+        margin-left: 60px;
+        padding: 0;
+    }
+
+    .can {
+        margin-top: 0;
+        margin-left: 0px;
+    }
+
+    .can button {
+        font-size: 10px;
+        padding: 1px 4px;
+    }
+
+    .r-bot {
+        margin-top: 35px;
+        margin-left: 46px;
+    }
+
+    .r-bot p {
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .cart-right {
+        width: 40%;
+        height: 100px;
+        margin-top: 5%;
+        margin-left: 20px;
+    }
+
+    .ord-titel h2 {
+        margin-top: 8%;
+        font-size: 10px;
+    }
+
+    .ord-total {
+        margin-top: 0px;
+        display: flex;
+        margin-left: 5%;
+    }
+
+    .tot-left p {
+        margin: 0;
+        padding: 0;
+        font-size: 8px;
+    }
+
+    .tot-right {
+        margin-left: 15%;
+    }
+
+    .tot-right p {
+        margin: 0;
+        padding: 0;
+        font-size: 8px;
+        font-weight: 500;
+    }
+
+    .check button {
+        width: 95%;
+        padding: 2px 0px;
+        background-color: white;
+        font-size: 8px;
+        font-weight: 500;
+        border: 1px solid #66667A;
+    }
+
+    /* footer
+    .footer {
+        margin-top: 38%;
+    }
+
+    .footer-left {
+        margin-top: 15px;
+        margin-left: 2%;
+        width: 20%;
+    }
+
+    .fleft-logo img {
+        width: 100%;
+    }
+
+    .fleft-text {
+        margin-top: 5px;
+    }
+
+    .fleft-text p {
+        font-size: 6px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 11px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 10px;
+    }
+
+    .footer-right {
+        margin-top: 20px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 11px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 12px;
+        color: #66667A;
+        letter-spacing: 5px;
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 8px;
+    } */
+
+}
+
+@media only screen and (min-width:481px) and (max-width:768px) {
+
+    .nav {
+        height: 40px;
+    }
+
+    .nav-left {
+        margin-top: 6px;
+        margin-left: 7px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 25px;
+    }
+
+    .nav-right {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .nav-right a {
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .bar-icon {
+        padding: 7px;
+        display: block;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+    /* middel */
+    .middel {
+        margin: 5% 5% 0 5%;
+    }
+
+    
+    .cartl-he h2 {
+        font-size: 18px;
+    }
+
+    .cartl-prod {
+        margin-top: 10px;
+    }
+
+    .cartl-img img {
+        width: 22vw;
+        height: inherit;
+    }
+
+    .cartl-detail {
+        margin-left: 10px;
+    }
+
+    .name-can h2 {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .size,
+    .width {
+        line-height: 0.5;
+    }
+
+    .size p {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cartl-cata {
+        height: 1vh;
+        margin-top: 10px;
+    }
+
+    .size select {
+        margin-top: 8px;
+        height: 3vh;
+        width: 7vw;
+        font-size: 10px;
+        padding: 0px 0px;
+    }
+
+    .width p {
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .width select {
+        margin-left: 10px;
+        margin-top: 8px;
+        height: 3vh;
+        width: 17vw;
+        font-size: 10px;
+        padding: 0px 0px;
+    }
+
+    .qp {
+        margin-top: 40px;
+    }
+
+    .qmin button {
+        font-size: 10px;
+        padding: 1px 4px;
+    }
+
+    .qno {
+        margin-left: 8px;
+    }
+
+    .qno {
+        padding-top: 8px;
+        font-size: 10px;
+    }
+
+    .qmax {
+        margin-left: 8px;
+    }
+
+    .qmax button {
+        font-size: 10px;
+        padding: 1px 4px;
+    }
+
+    .r-top {
+        margin-left: 65px;
+        padding: 0;
+    }
+
+    .can {
+        margin-top: 0;
+        margin-left: 0px;
+    }
+
+    .can button {
+        font-size: 13px;
+        padding: 1px 4px;
+    }
+
+    .r-bot {
+        margin-top: 58px;
+        margin-left: 45px;
+    }
+
+    .r-bot p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .cart-right {
+        width: 40%;
+        height: 120px;
+        margin-top: 5%;
+        margin-left: 20px;
+    }
+
+    .ord-titel h2 {
+        margin-top: 10%;
+        font-size: 13px;
+    }
+
+    .ord-total {
+        margin-top: 10px;
+        display: flex;
+        margin-left: 5%;
+        line-height: 1.6;
+    }
+
+    .tot-left p {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+    }
+
+    .tot-right {
+        margin-left: 35px;
+    }
+
+    .tot-right p {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .check button {
+        width: 95%;
+        padding: 2px 0px;
+        background-color: white;
+        font-size: 10px;
+        font-weight: 500;
+        border: 1px solid #66667A;
+    }
+
+    /* footer
+    .footer {
+        margin-top: 66%;
+    }
+
+    .footer-left {
+        margin-top: 15px;
+        margin-left: 5%;
+        width: 20%;
+    }
+
+    .fleft-logo img {
+        width: 100%;
+    }
+
+    .fleft-text {
+        margin-top: 8px;
+    }
+
+    .fleft-text p {
+        font-size: 8px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 13px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 10px;
+    }
+
+    .footer-right {
+        margin-top: 32px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 13px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 13px;
+        color: #66667A;
+        letter-spacing: 5px;
+    }
+
+    .f-bottem {
+        padding-bottom: 5px;
+        margin-top: 20px;
+        border-top: 1px solid rgb(163, 163, 163);
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 11px;
+        margin-top: 10px;
+    } */
+
+}
+
+@media only screen and (min-width:769px) and (max-width:1024px) {
+
+    .nav {
+        height: 40px;
+    }
+
+    .nav-left {
+        margin-top: 6px;
+        margin-left: 7px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 25px;
+    }
+
+    .nav-right {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .nav-right a {
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .bar-icon {
+        padding: 7px;
+        display: block;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+
+    /* middel */
+    .middel {
+        margin: 5% 5% 0 5%;
+    }
+    .cartl-he h2 {
+        font-size: 22px;
+    }
+
+    .cartl-prod {
+        margin-top: 10px;
+    }
+
+    .cartl-img img {
+        width: 18vw;
+        height: inherit;
+    }
+
+    .cartl-detail {
+        margin-left: 10px;
+    }
+
+    .name-can h2 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+   
+
+    .cartl-cata {
+        height: 1vh;
+        margin-top: 15px;
+    }
+     .size,
+    .width {
+        line-height: 0.7;
+    }
+
+    .size p {
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .size select {
+        margin-top: 8px;
+        height: 2vh;
+        width: 4vw;
+        font-size: 13px;
+        padding: 0px 0px;
+    }
+
+    .width p {
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+        margin-left: 15px;
+    }
+
+    .width select {
+        margin-left: 15px;
+        margin-top: 8px;
+        height: 2vh;
+        width: 13vw;
+        font-size: 13px;
+        padding: 0px 0px;
+    }
+
+    .qp {
+        margin-top: 45px;
+    }
+
+    .qmin button {
+        font-size: 13px;
+        padding: 1px 4px;
+    }
+
+    .qno {
+        margin-left: 10px;
+    }
+
+    .qno {
+        padding-top: 2px;
+        font-size: 13px;
+    }
+
+    .qmax {
+        margin-left: 10px;
+    }
+
+    .qmax button {
+        font-size: 13px;
+        padding: 1px 4px;
+    }
+
+    .r-top {
+        margin-left: 65px;
+        padding: 0;
+    }
+
+    .can {
+        margin-top: 0;
+        margin-left: 0px;
+    }
+
+    .can button {
+        font-size: 15px;
+        padding: 2px 6px;
+    }
+
+    .r-bot {
+        margin-top: 68px;
+        margin-left: 45px;
+    }
+
+    .r-bot p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .cart-right {
+        width: 30%;
+        height: 170px;
+        margin-top: 2%;
+        margin-left: 0px;
+    }
+
+    .ord-titel h2 {
+        margin-top: 10%;
+        font-size: 18px;
+    }
+
+    .ord-total {
+        margin-top: 15px;
+        display: flex;
+        margin-left: 10%;
+        line-height: 1.8;
+    }
+
+    .tot-left p {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+    }
+
+    .tot-right {
+        margin-left: 55px;
+    }
+
+    .tot-right p {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .check button {
+        width: 95%;
+        padding: 3px 0px;
+        font-size: 13px;
+    }
+
+    /* footer
+    .footer {
+        margin-top: 62%;
+    }
+
+    .footer-left {
+        margin-top: 30px;
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    .fleft-logo img {
+        width: 40%;
+    }
+
+    .fleft-text {
+        margin-top: 8px;
+    }
+
+    .fleft-text p {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 14px;
+    }
+
+    .footer-right {
+        margin-top: 32px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 16px;
+        color: #66667A;
+        letter-spacing: 10px;
+    }
+
+    .f-bottem {
+        padding-bottom: 5px;
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 13px;
+        margin-top: 10px;
+    } */
+
+}
+
+@media only screen and (min-width:1025px) and (max-width:1200px) {
+
+    .nav {
+        height: 50px;
+    }
+
+    .nav-left {
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 35px;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+    .nav-right a {
+        font-size: 18px;
+    }
+
+    /* middel */
+    .middel {
+        margin: 5% 5% 0 5%;
+    }
+
+    .cartl-he h2 {
+        font-size: 25px;
+    }
+
+    .cartl-prod {
+        margin-top: 10px;
+    }
+
+    .cartl-img img {
+        width: 16vw;
+        height: inherit;
+    }
+
+    .cartl-detail {
+        margin-left: 10px;
+    }
+
+    .name-can h2 {
+        margin-top: 5px;
+        font-size: 20px;
+    }
+   
+
+    .cartl-cata {
+        height: 1vh;
+        margin-top: 15px;
+    }
+     .size,
+    .width {
+        line-height: 1.3;
+    }
+
+    .size p {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .size select {
+        margin-top: 8px;
+        height: 2vh;
+        width: 4vw;
+        font-size: 18px;
+        padding: 0px 0px;
+    }
+
+    .width p {
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .width select {
+        margin-left: 20px;
+        margin-top: 8px;
+        height: 2vh;
+        width: 12vw;
+        font-size: 17px;
+        padding: 0px 0px;
+    }
+
+    .qp {
+        margin-top: 65px;
+    }
+
+    .qmin button {
+        font-size: 17px;
+        padding: 1px 4px;
+    }
+
+    .qno {
+        margin-left: 13px;
+    }
+
+    .qno {
+        padding-top: 0px;
+        font-size: 17px;
+    }
+
+    .qmax {
+        margin-left: 13px;
+    }
+
+    .qmax button {
+        font-size: 17px;
+        padding: 1px 4px;
+    }
+
+    .r-top {
+        margin-left: 40px;
+        padding: 0;
+    }
+
+    .can {
+        margin-top: 0;
+        margin-left: 0px;
+    }
+
+    .can button {
+        font-size: 18px;
+        padding: 2px 8px;
+    }
+
+    .r-bot {
+        margin-top: 88px;
+        margin-left: 15px;
+    }
+
+    .r-bot p {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .cart-right {
+        width: 25%;
+        height: 200px;
+        margin-top: 2%;
+        margin-left: 55px;
+    }
+
+    .ord-titel h2 {
+        margin-top: 10%;
+        font-size: 22px;
+    }
+
+    .ord-total {
+        margin-top: 15px;
+        display: flex;
+        margin-left: 5%;
+        line-height: 1.6;
+    }
+
+    .tot-left p {
+        margin: 0;
+        padding: 0;
+        font-size: 17px;
+    }
+
+    .tot-right {
+        margin-left: 60px;
+    }
+
+    .tot-right p {
+        margin: 0;
+        padding: 0;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .check button {
+        margin-top: 5px;
+        width: 95%;
+        padding: 3px 0px;
+        font-size: 15px;
+    }
+
+    /* footer
+    .footer {
+        margin-top: 57%;
+    }
+
+    .footer-left {
+        margin-top: 30px;
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    .fleft-logo img {
+        width: 30%;
+    }
+
+    .fleft-text {
+        margin-top: 8px;
+    }
+
+    .fleft-text p {
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 18px;
+    }
+
+    .footer-right {
+        margin-top: 32px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 20px;
+        color: #66667A;
+        letter-spacing: 15px;
+    }
+
+    .f-bottem {
+        padding-bottom: 5px;
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 10px;
+    } */
+
+}

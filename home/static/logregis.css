@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  background-color: whitesmoke;
+}
+ 
+/* Navbar  */
+.nav{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.nav a:hover{
+    opacity: 0.4;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+}
+
+.nav-left{
+     margin-top: 17px;
+     margin-left: 10px;
+     display: flex;
+}
+
+.nav-left a img{
+    width: 100%;
+    height: 45px;
+}
+
+
+.nav-right{
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+.nav-right a{
+
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.log-header{
+    background-image: url("../static/image/Contect/contect-img.webp");
+    color: white;
+    filter: grayscale(20%);
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logh-text h2{
+    padding-top: 100px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* middel */
+
+.middel{ 
+    margin-top: 2%;
+}
+
+.lr{
+margin: 5% 40%;
+width: 350px;
+height: 320px;
+overflow: hidden;
+position: relative;
+}
+
+.lr-head{
+    margin-top: 5%;
+    margin-left: 1%;
+    
+    width: 340px;
+    /* border: 1px solid #ccc; */
+    border: 2px solid white ; 
+}
+
+.lrbt1{
+    border: none;
+    /* background-color: white; */
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 49.6px;
+    background-color: white ;
+    position: relative;
+}
+.lrbt2{
+    border: none;
+    /* background-color: white; */
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 49.5px;
+    position: relative;
+}
+
+.input-group{
+    top: 100px;
+    position: absolute;
+    width: 300px;
+}
+.input-group input{
+    border: 1px solid #ced4da;; 
+    padding-left: 10px;
+}
+.input-field{
+    width: 100%;
+    padding: 8px 0;
+    margin: 5px 0;
+    outline: none;
+}
+.submit-btn{
+    width: 100%;
+    padding: 7px 20px;
+    display: block;
+    margin-top: 10px;  
+    border: 1px solid #ced4da;;  
+    font-size: 18px;
+    font-weight: 500;
+}
+.l-btn{
+    padding-left: 100px;
+}
+.r-btn{
+    padding-left: 90px;
+}
+.submit-btn:hover{
+    background-color: #000;
+    color: white;
+}
+
+#login{
+    left: 30px;
+}
+#register{
+    left: 390px;
+}
+
+
+
+
+
+/* footer */
+.footer {
+    background-color: white;
+    margin-top: 3%;
+}
+
+.f-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 5%;
+    gap: 40px;
+}
+
+.footer-left {
+    width: 25%;
+}
+
+.footer-center1 {
+    width: 20%;
+}
+
+.footer-right {
+    width: 20%;
+}
+
+.fleft-logo img {
+    width: 35%;
+}
+
+.fleft-text {
+    margin-top: 20px;
+}
+
+.fleft-text p {
+    font-size: 18px;
+    color: #66667A;
+    line-height: 1.5;
+}
+
+.fcenter1-text h2,
+.fright-text h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid gray;
+}
+
+.fcenter1-text p {
+    line-height: 1.8;
+    font-size: 18px;
+    color: #66667A;
+    font-weight: 500;
+}
+
+.footer-right {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.footer-center1 {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.fright-icon {
+    display: flex;
+    gap: 15px;
+}
+
+.fright-icon i {
+    font-size: 25px;
+    color: #66667A;
+}
+
+.f-bottem {
+    margin-top: 20px;
+    border-top: 1px solid rgb(163, 163, 163);
+    padding: 10px;
+}
+
+.f-bottem p {
+    text-align: center;
+    font-size: 18px;
+    color: #66667A;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .f-top{
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-center1,
+    .footer-right{
+        width: 100%;
+    }
+
+}

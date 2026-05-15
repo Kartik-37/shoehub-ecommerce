@@ -1,0 +1,435 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Shoe Hub</title>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="nav">
+                <div class="nav-left">
+                    <a href="{%url 'invoice'%}"><img src="{% static 'image/logo/Logo2.png' %}" alt=""></a>
+                </div>
+
+                <div class="nav-right" id="nav-right">
+                    <a href="{% url 'man'%}">Men</a>
+                    <a href="{% url 'women'%}">Women</a>
+                    <a href="{% url 'kid'%}">Kids</a>
+                    <a href="{% url 'about'%}">About</a>
+                    <a href="{% url 'contact'%}">Contact</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'logout_view'%}">Logout</a>
+                    <a href="{% url 'account'%}"><i class="fa-solid fa-user"></i></a>
+                    <a href="{% url 'cart'%}"><i class="fa-solid fa-cart-shopping"></i></a>
+                {% else %}
+                      <a href="{% url 'register'%}">Login/Register</a>
+                {% endif %}
+                </div>
+                
+                <div class="bar-icon" onclick="bar()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+
+
+
+            <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'image/slide/slide 1.webp' %}" class="d-block w-100 object-fit-cover"
+                            alt="">
+                        <div class="carousel-caption d-md-block slide1">
+                            <div class="caption-content">
+                                <div class="st1">
+                                    <h5>Comfort Meets Fashion</h5>
+                                </div>
+                                <div class="st2">
+                                    <h2>Discover shoes that look</h2>
+                                    <h2> great and feel even better.</h2>
+                                </div>
+                                <div class="st3">
+                                    <p>Our collection features comfortable and stylish footwear</p>
+                                    <p> designed to keep your feet happy all day long.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{% static 'image/slide/slide 2.webp' %}" class="d-block w-100 object-fit-cover"
+                            alt="">
+                        <div class="carousel-caption d-md-block slide2">
+                            <div class="caption-content">
+                                <div class="st1">
+                                    <h5>Elevate Your Look</h5>
+                                </div>
+                                <div class="st2">
+                                    <h2>Find the perfect pair</h2>
+                                    <h2>of shoes to complete.</h2>
+                                </div>
+                                <div class="st3">
+                                    <p>Explore our wide range of styles, colors, and </p>
+                                    <p> materials to find the perfect shoes for any occasion.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{% static 'image/slide/slide 3.jpg' %}" class="d-block w-100 object-fit-cover" alt="">
+                        <div class="carousel-caption d-md-block slide3">
+                            <div class="caption-content">
+                                <div class="st1">
+                                    <h5>Step into Style</h5>
+                                </div>
+                                <div class="st2">
+                                    <h2>Discover the latest</h2>
+                                    <h2>trends in footwear</h2>
+                                </div>
+                                <div class="st3">
+                                    <p>From classic sneakers to trendy boots, our </p>
+                                    <p>collection has something for everyone.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="middel">
+
+            <div class="shoe-catagery">
+                <a href="{% url 'gym sneakers'%}">
+                    <div class="gym">
+                        <!-- <div class="cat-img1"><img src="{% static 'image/catagary/gym.webp' %}" alt=""></div> -->
+                        <div class="cat-text1">
+                            <h2>GYM sneakers</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="{% url 'hike sneakers'%}">
+                    <div class="hiking">
+                        <!-- <div class="cat-img2"><img src="{% static 'image/catagary/hiking.webp' %}" alt=""></div> -->
+                        <div class="cat-text2">
+                            <h2>hike sneakers</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="{% url 'work sneakers'%}">
+                    <div class="working">
+                        <!-- <div class="cat-img3"><img src="{% static 'image/catagary/work.webp' %}" alt=""></div> -->
+                        <div class="cat-text3">
+                            <h2>work sneakers</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="{% url 'chuck sneakers'%}">
+                    <div class="chukks">
+                        <!-- <div class="cat-img4"><img src="{% static 'image/catagary/chukks.webp' %}" alt=""></div> -->
+                        <div class="cat-text4">
+                            <h2>Running sneakers</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="latest-col">
+
+                <div class="tr-row">
+                    <div class="section-title">
+                        <h2>Recommended For You</h2>
+                        <div class="arrow-buttons">
+                            <button id="prev-tr">&#8592;</button>
+                            <button id="next-tr">&#8594;</button>
+                        </div>
+                    </div>
+
+                    <div class="slider-wrapper">
+                        <div class="lat-slider" id="watchSlider-tr">
+                            {% for i in data %}
+                           
+                                <div class="lat-card">
+                                     <a href="{% url 'detail' i.id %}">
+                                    <img src="../static/image/detail/{{i.image1.url}}" alt="zapatos dg mercadolibre">
+                                    <h3>{{i.name}}</h3>
+                                    </a>
+                                    <div class="lat-pri">
+                                        <p>₹{{i.price}} </p>
+                                        <a href="{% url 'cart1' i.id %}">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="wide">
+                <div class="wide-img"><img src="{% static 'image/wide/wide-banner.webp' %}" alt="">
+                <div class="wid-text">
+                    <h5>Comfort Meets Fashion</h5>
+                    <h2>Discover shoes that look great <br> and feel even better</h2>
+                    <p>Our collection features comfortable and stylish footwear designed to keep your feet happy all day
+                        long.</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="best-sell">
+                <div class="best-titel">
+                    <h2>Kid Collections</h2>
+                </div>
+                <div class="best-grid">
+                    {% for i in best %}
+                    <div class="best-s1">
+                        <a href="{% url 'detail' i.id %}">
+                            <div class="sell-img"><img src="../static/image/detail/{{i.image1.url}}" alt="">
+                            </div>
+                        </a>
+                        <div class="sell-text">
+                            <a href="{% url 'detail' i.id %}">
+                                <div class="sell-name">
+                                    <h2>{{i.name}}</h2>
+                                </div>
+                            </a>
+                            <div class="sell-pri">
+                                <div class="sell-p1">
+                                    <p>₹{{i.price}}</p>
+                                </div>
+                                <a href="{% url 'cart1' i.id %}"><div class="sell-p2"><i class="fa-solid fa-cart-shopping"></i></div></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="mwk-cat">
+                <div class="mwk-man">
+                    <a href="{% url 'man'%}">
+                        <div class="m-img">
+                            <img src="{% static 'image/mwkcat/man.webp' %}" alt="">
+                        </div>
+                        <div class="m-text">
+                            <h5>Trending</h5>
+                            <h2>Men Collections</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="mwk-women">
+                    <a href="{% url 'women'%}">
+                        <div class="w-img">
+                            <img src="{% static 'image/mwkcat/woman.webp' %}" alt="">
+                        </div>
+                        <div class="w-text">
+                            <h5>Latest</h5>
+                            <h2>Woman Collections</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="mkw-kid">
+                    <a href="{% url 'kid'%}">
+                        <div class="k-img">
+                            <img src="{% static 'image/mwkcat/kid.webp' %}" alt="">
+                        </div>
+                        <div class="k-text">
+                            <h5>Comfort</h5>
+                            <h2>Kid Collections</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-cat">
+
+                <div class="ser-cat1">
+                    <div class="ser-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="ser-text">
+                        <p>Secure Payment</p>
+                    </div>
+                </div>
+
+                <div class="ser-cat2">
+                    <div class="ser-icon">
+                        <i class="fa fa-headphones"></i>
+                    </div>
+                    <div class="ser-text">
+                        <p>Clients Discounts</p>
+                    </div>
+                </div>
+
+                <div class="ser-cat3">
+                    <div class="ser-icon">
+                        <i class="fa fa-exchange"></i>
+                    </div>
+                    <div class="ser-text">
+                        <p>Return of goods</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+
+            <div class="f-top">
+
+                <div class="footer-left">
+                    <div class="fleft-logo">
+                        <img src="{% static 'image/logo/Logo2.png' %}" alt="">
+                    </div>
+                    <div class="fleft-text">
+                        <p>Welcome to our store, where we pride ourselves on providing exceptional products and
+                            unparalleled customer service our store is a haven for those who appreciate quality, style,
+                            and innovation.</p>
+                    </div>
+                </div>
+
+                <div class="footer-center1">
+                    <div class="fcenter1-text">
+                        <h2>Quick Links</h2>
+                        <a href="{% url 'home'%}">
+                            <p>Home</p>
+                        </a>
+                        <a href="{% url 'man'%}">
+                            <p>Men</p>
+                        </a>
+                        <a href="{% url 'women'%}">
+                            <p>Women</p>
+                        </a>
+                        <a href="{% url 'kid'%}">
+                            <p>Kid</p>
+                        </a>
+                        <a href="{% url 'about'%}">
+                            <p>About</p>
+                        </a>
+                        <a href="{% url 'contact'%}">
+                            <p>Contact</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-center1">
+                    <div class="fcenter1-text">
+                        <h2>Categories</h2>
+                        <a href="{% url 'gym sneakers'%}">
+                            <p>Gym Sneakers</p>
+                        </a>
+                        <a href="{% url 'hike sneakers'%}">
+                            <p>Hike Sneakers</p>
+                        </a>
+                        <a href="{% url 'work sneakers'%}">
+                            <p>Work Sneakers</p>
+                        </a>
+                        <a href="{% url 'chuck sneakers'%}">
+                            <p>Running Sneakers</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="fright-text">
+                        <h2>Follow us</h2>
+                        <div class="fright-icon">
+                            <div class="fi"><a href="">
+                                    <p><i class="fa-brands fa-instagram"></i></p>
+                                </a></div>
+                            <div class="fi"> <a href="">
+                                    <p><i class="fa-brands fa-x-twitter"></i></p>
+                                </a></div>
+                            <div class="fi"><a href="">
+                                    <p><i class="fa-brands fa-youtube"></i></p>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="f-bottem">
+                <p>© 2025 Shoe Hub India. All Rights Reserved.</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- bootstrap5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- latest-column script -->
+    <script>
+        function setupSlider(sliderId, nextBtnId, prevBtnId) {
+            const slider = document.getElementById(sliderId);
+            const next = document.getElementById(nextBtnId);
+            const prev = document.getElementById(prevBtnId);
+            const cardWidth = 270;
+
+            next.addEventListener("click", () => {
+                if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - cardWidth) {
+                    slider.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                }
+            });
+
+            prev.addEventListener("click", () => {
+                if (slider.scrollLeft <= 0) {
+                    slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+                } else {
+                    slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                }
+            });
+        }
+
+        setupSlider("watchSlider-tr", "next-tr", "prev-tr");
+        setupSlider("watchSlider-fr", "next-fr", "prev-fr");
+    </script>
+    <!-- nav-bar -->
+      <script>
+
+        function bar() {
+            const navRight = document.getElementById("nav-right");
+            navRight.classList.toggle("active");
+        }
+    </script>
+
+
+</body>
+
+</html>

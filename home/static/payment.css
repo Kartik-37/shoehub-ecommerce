@@ -1,0 +1,1652 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    background-color: whitesmoke;
+}
+
+
+/* Navbar  */
+.nav {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.nav a:hover {
+    opacity: 0.4;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+.nav-left {
+    margin-top: 17px;
+    margin-left: 10px;
+    display: flex;
+}
+
+.nav-left a img {
+    width: 100%;
+    height: 45px;
+}
+
+
+.nav-right {
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+.nav-right a {
+
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.bar-icon {
+    display: none;
+}
+
+/* slider  */
+
+/* Carousel adjustments */
+.lat-card img {
+    overflow-y: hidden;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    animation: fadeIn 1s infinite ease-in-out;
+    /* Added fade-in animation */
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Carousel Captions */
+.slide1 {
+    text-align: left;
+    left: 10%;
+    right: auto;
+    bottom: 40%;
+    /*Increased bottom position*/
+}
+
+.slide2 {
+    text-align: left;
+    left: 50%;
+    bottom: 40%;
+    /*Increased bottom position*/
+}
+
+.slide3 {
+    text-align: left;
+    left: 60%;
+    bottom: 35%;
+    /*Increased bottom position*/
+}
+
+.st1 {
+    margin-bottom: 25px;
+    /*Increased margin*/
+}
+
+.caption-content h5 {
+    font-size: 20px;
+    /*Increased font size*/
+    font-weight: 500;
+    color: white;
+    font-family: "Manrope", sans-serif;
+}
+
+.st2 {
+    margin-bottom: 40px;
+    /*Increased margin*/
+}
+
+.caption-content h2 {
+    font-size: 50px;
+    /*Increased font size*/
+    font-weight: 600;
+    color: white;
+    line-height: 0.9;
+}
+
+.caption-content p {
+    font-size: 24px;
+    /*Increased font size*/
+    color: rgba(255, 255, 255, 0.9);
+    /*Increased opacity*/
+    width: 100%;
+    color: #fff;
+    line-height: 0.9;
+    font-weight: 300;
+}
+
+
+/* middel */
+
+.middel {
+    margin-top: 2%;
+}
+
+/* delivery */
+
+.delivery {
+    margin: 5% 0 0 38%;
+}
+
+.del-titel h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* form */
+form {
+    margin-top: 20px;
+}
+
+form p {
+    margin: 0;
+}
+
+form p {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.flname {
+    display: flex;
+}
+
+.frname {
+    width: 20%;
+}
+
+.frname input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.lsname {
+    width: 20%;
+    margin-left: 15px;
+}
+
+.lsname input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.addr {
+    margin-top: 20px;
+}
+
+.addr textarea {
+    width: 41.5%;
+    height: 100px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.csp {
+    margin-top: 15px;
+    display: flex;
+}
+
+.city {
+    width: 13%;
+}
+
+.city input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.state {
+    width: 13%;
+    margin-left: 13px;
+}
+
+.state input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.pincode {
+    width: 13%;
+    margin-left: 13px;
+}
+
+.pincode input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.phone {
+    margin-top: 10px;
+    width: 41.5%;
+}
+
+.phone input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* Payment */
+
+.pay-titel h2 {
+    margin: 30px 0 0 0;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.cname {
+    margin-top: 20px;
+    width: 41.2%;
+}
+
+.cname input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.expcode {
+    display: flex;
+    margin-top: 15px;
+}
+
+.exp {
+    width: 20%;
+}
+
+.exp input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.code {
+    width: 20%;
+    margin-left: 15px;
+}
+
+.code input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.cardno {
+    margin-top: 15px;
+    width: 41.2%;
+}
+
+.cardno input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.paybut {
+    margin-top: 20px;
+}
+
+.paybut button {
+    width: 41.5%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.paybut button:hover {
+    background-color: #fff;
+}
+
+.paybut P {
+    margin-top: 10px;
+    margin-left: 20%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* footer */
+.footer {
+    background-color: white;
+    margin-top: 3%;
+}
+
+.f-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 5%;
+    gap: 40px;
+}
+
+.footer-left {
+    width: 25%;
+}
+
+.footer-center1 {
+    width: 20%;
+}
+
+.footer-right {
+    width: 20%;
+}
+
+.fleft-logo img {
+    width: 35%;
+}
+
+.fleft-text {
+    margin-top: 20px;
+}
+
+.fleft-text p {
+    font-size: 18px;
+    color: #66667A;
+    line-height: 1.5;
+}
+
+.fcenter1-text h2,
+.fright-text h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid gray;
+}
+
+.fcenter1-text p {
+    line-height: 1.8;
+    font-size: 18px;
+    color: #66667A;
+    font-weight: 500;
+}
+
+.footer-right {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.footer-center1 {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.fright-icon {
+    display: flex;
+    gap: 15px;
+}
+
+.fright-icon i {
+    font-size: 25px;
+    color: #66667A;
+}
+
+.f-bottem {
+    margin-top: 20px;
+    border-top: 1px solid rgb(163, 163, 163);
+    padding: 10px;
+}
+
+.f-bottem p {
+    text-align: center;
+    font-size: 18px;
+    color: #66667A;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .f-top{
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-center1,
+    .footer-right{
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+
+    .nav {
+        height: 40px;
+    }
+
+    .nav-left {
+        margin-top: 6px;
+        margin-left: 7px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 25px;
+    }
+
+    .nav-right {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .nav-right a {
+        font-size: 15px;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .bar-icon {
+        padding: 7px;
+        display: block;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+    /* middel */
+    .middel {
+        margin: 5% 0 0 0;
+    }
+
+    .delivery {
+        margin: 5% 0 0 29%;
+    }
+
+    .del-titel h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    /* form */
+    form {
+        margin-top: 10px;
+    }
+
+    form p {
+        font-size: 8px;
+        margin-bottom: 0px;
+    }
+
+    .frname {
+        width: 30%;
+    }
+
+    .frname input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .lsname {
+        width: 30%;
+        margin-left: 5px;
+    }
+
+    .lsname input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .addr {
+        margin-top: 6px;
+    }
+
+    .addr textarea {
+        width: 62%;
+        height: 40px;
+        font-size: 7px;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+
+    .csp {
+        margin-top: 2px;
+    }
+
+    .city {
+        width: 20%;
+    }
+
+    .city input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .state {
+        width: 20%;
+        margin-left: 1px;
+    }
+
+    .state input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .pincode {
+        width: 20%;
+        margin-left: 1.5px;
+    }
+
+    .pincode input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .phone {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .phone input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .pay-titel h2 {
+        margin: 10px 0 0 0;
+        font-size: 20px;
+    }
+
+    .cname {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .cname input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .expcode {
+        margin-top: 5px;
+    }
+
+    .exp {
+        width: 30%;
+    }
+
+    .exp input {
+        height: 20px;
+        font-size: 6px;
+        padding-left: 2px;
+    }
+
+    .code {
+        width: 30%;
+        margin-left: 4px;
+    }
+
+    .code input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .cardno {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .cardno input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .paybut {
+        margin-top: 10px;
+    }
+
+    .paybut button {
+        width: 62%;
+        height: 20px;
+        font-size: 8px;
+        padding-left: 5px;
+    }
+
+    .paybut P {
+        margin-top: 5px;
+        margin-left: 30%;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    /* footer */
+    /* .footer {
+        margin-top: 4%;
+        padding-bottom: 1px;
+    }
+
+    .footer-left {
+        margin-top: 15px;
+        margin-left: 2%;
+        width: 20%;
+    }
+
+    .fleft-logo img {
+        width: 100%;
+    }
+
+    .fleft-text {
+        margin-top: 5px;
+    }
+
+    .fleft-text p {
+        font-size: 6px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 11px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 10px;
+    }
+
+    .footer-right {
+        margin-top: 20px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 11px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 12px;
+        color: #66667A;
+        letter-spacing: 5px;
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 8px;
+    } */
+
+}
+
+@media only screen and (min-width:481px) and (max-width:768px) {
+
+    .nav {
+        height: 40px;
+    }
+
+    .nav-left {
+        margin-top: 6px;
+        margin-left: 7px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 25px;
+    }
+
+    .nav-right {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .nav-right a {
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .bar-icon {
+        padding: 7px;
+        display: block;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+    /* middel */
+    .middel {
+        margin: 5% 0 0 0;
+    }
+
+    .delivery {
+        margin: 5% 0 0 29%;
+    }
+
+    .del-titel h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    /* form */
+    form {
+        margin-top: 10px;
+    }
+
+    form p {
+        font-size: 8px;
+        margin-bottom: 0px;
+    }
+
+    .frname {
+        width: 30%;
+    }
+
+    .frname input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .lsname {
+        width: 30%;
+        margin-left: 5px;
+    }
+
+    .lsname input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .addr {
+        margin-top: 6px;
+    }
+
+    .addr textarea {
+        width: 62%;
+        height: 40px;
+        font-size: 7px;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+
+    .csp {
+        margin-top: 2px;
+    }
+
+    .city {
+        width: 20%;
+    }
+
+    .city input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .state {
+        width: 20%;
+        margin-left: 1px;
+    }
+
+    .state input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .pincode {
+        width: 20%;
+        margin-left: 1.5px;
+    }
+
+    .pincode input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .phone {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .phone input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .pay-titel h2 {
+        margin: 10px 0 0 0;
+        font-size: 20px;
+    }
+
+    .cname {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .cname input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .expcode {
+        margin-top: 5px;
+    }
+
+    .exp {
+        width: 30%;
+    }
+
+    .exp input {
+        height: 20px;
+        font-size: 6px;
+        padding-left: 2px;
+    }
+
+    .code {
+        width: 30%;
+        margin-left: 4px;
+    }
+
+    .code input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .cardno {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .cardno input {
+        height: 20px;
+        font-size: 7px;
+        padding-left: 5px;
+    }
+
+    .paybut {
+        margin-top: 10px;
+    }
+
+    .paybut button {
+        width: 62%;
+        height: 20px;
+        font-size: 8px;
+        padding-left: 5px;
+    }
+
+    .paybut P {
+        margin-top: 5px;
+        margin-left: 30%;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    /* footer */
+    /* .footer {
+        margin-top: 5%;
+    }
+
+    .footer-left {
+        margin-top: 15px;
+        margin-left: 5%;
+        width: 20%;
+    }
+
+    .fleft-logo img {
+        width: 100%;
+    }
+
+    .fleft-text {
+        margin-top: 8px;
+    }
+
+    .fleft-text p {
+        font-size: 8px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 13px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 10px;
+    }
+
+    .footer-right {
+        margin-top: 32px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 13px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 13px;
+        color: #66667A;
+        letter-spacing: 5px;
+    }
+
+    .f-bottem {
+        padding-bottom: 5px;
+        margin-top: 20px;
+        border-top: 1px solid rgb(163, 163, 163);
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 11px;
+        margin-top: 10px;
+    } */
+
+}
+
+@media only screen and (min-width:769px) and (max-width:1024px) {
+
+    .nav {
+        height: 40px;
+    }
+
+    .nav-left {
+        margin-top: 6px;
+        margin-left: 7px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 25px;
+    }
+
+    .nav-right {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .nav-right a {
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .bar-icon {
+        padding: 7px;
+        display: block;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+
+     /* middel */
+    .middel {
+        margin: 5% 0 0 0;
+    }
+
+    .delivery {
+        margin: 5% 0 0 29%;
+    }
+
+    .del-titel h2 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    /* form */
+    form {
+        margin-top: 10px;
+    }
+
+    form p {
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+
+    .frname {
+        width: 30%;
+    }
+
+    .frname input {
+        height: 22px;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .lsname {
+        width: 30%;
+        margin-left: 5px;
+    }
+
+    .lsname input {
+        height: 22px;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .addr {
+        margin-top: 10px;
+    }
+
+    .addr textarea {
+        width: 62%;
+        height: 50px;
+        font-size: 10px;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+
+    .csp {
+        margin-top: 2px;
+    }
+
+    .city {
+        width: 20%;
+    }
+
+    .city input {
+        height: 25px;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .state {
+        width: 20%;
+        margin-left: 5px;
+    }
+
+    .state input {
+        height: 25px;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .pincode {
+        width: 20%;
+        margin-left: 5px;
+    }
+
+    .pincode input {
+        height: 25px;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .phone {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .phone input {
+        height: 25px;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .pay-titel h2 {
+        margin: 10px 0 0 0;
+        font-size: 25px;
+    }
+
+    .cname {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .cname input {
+        height: 25px;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .expcode {
+        margin-top: 5px;
+    }
+
+    .exp {
+        width: 30%;
+    }
+
+    .exp input {
+        height: 25px;
+        font-size: 10px;
+        padding-left: 2px;
+    }
+
+    .code {
+        width: 30%;
+        margin-left: 4px;
+    }
+
+    .code input {
+        height: 25px;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .cardno {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .cardno input {
+        height: 25px;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .paybut {
+        margin-top: 15px;
+    }
+
+    .paybut button {
+        width: 62%;
+        height: 30px;
+        font-size: 13px;
+        padding-left: 5px;
+    }
+
+    .paybut P {
+        margin-top: 5px;
+        margin-left: 30%;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    /* footer */
+    /* .footer {
+        margin-top: 16%;
+    }
+
+    .footer-left {
+        margin-top: 30px;
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    .fleft-logo img {
+        width: 40%;
+    }
+
+    .fleft-text {
+        margin-top: 8px;
+    }
+
+    .fleft-text p {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 14px;
+    }
+
+    .footer-right {
+        margin-top: 32px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 16px;
+        color: #66667A;
+        letter-spacing: 10px;
+    }
+
+    .f-bottem {
+        padding-bottom: 5px;
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 13px;
+        margin-top: 10px;
+    } */
+
+}
+
+@media only screen and (min-width:1025px) and (max-width:1200px) {
+
+    .nav {
+        height: 50px;
+    }
+
+    .nav-left {
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 35px;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+    .nav-right a {
+        font-size: 18px;
+    }
+
+    /* middel */
+    .middel {
+        margin: 5% 0 0 0;
+    }
+
+    .delivery {
+        margin: 5% 0 0 30%;
+    }
+
+    .del-titel h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    /* form */
+    form {
+        margin-top: 10px;
+    }
+
+    form p {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .frname {
+        width: 30%;
+    }
+
+    .frname input {
+        height: 30px;
+        font-size: 14px;
+        padding-left: 5px;
+    }
+
+    .lsname {
+        width: 30%;
+        margin-left: 5px;
+    }
+
+    .lsname input {
+        height: 30px;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+    .addr {
+        margin-top: 10px;
+    }
+
+    .addr textarea {
+        width: 62%;
+        height: 68px;
+        font-size: 15px;
+        padding-left: 15px;
+        padding-top: 8px;
+    }
+
+    .csp {
+        margin-top: 2px;
+    }
+
+    .city {
+        width: 20%;
+    }
+
+    .city input {
+        height: 30px;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+    .state {
+        width: 20%;
+        margin-left: 5px;
+    }
+
+    .state input {
+        height: 30px;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+    .pincode {
+        width: 20%;
+        margin-left: 5px;
+    }
+
+    .pincode input {
+        height: 30px;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+    .phone {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .phone input {
+        height: 30px;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+    .pay-titel h2 {
+        margin: 15px 0 15px 0;
+        font-size: 30px;
+    }
+
+    .cname {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .cname input {
+        height: 30px;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+    .expcode {
+        margin-top: 5px;
+    }
+
+    .exp {
+        width: 30%;
+    }
+
+    .exp input {
+        height: 30px;
+        font-size: 15px;
+        padding-left: 2px;
+    }
+
+    .code {
+        width: 30%;
+        margin-left: 4px;
+    }
+
+    .code input {
+        height: 30px;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+    .cardno {
+        margin-top: 5px;
+        width: 62%;
+    }
+
+    .cardno input {
+        height: 30px;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+    .paybut {
+        margin-top: 15px;
+    }
+
+    .paybut button {
+        width: 62%;
+        height: 35px;
+        font-size: 18px;
+        padding-left: 5px;
+    }
+
+    .paybut P {
+        margin-top: 5px;
+        margin-left: 30%;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    /* footer */
+    /* .footer {
+        margin-top: 6%;
+    }
+
+    .footer-left {
+        margin-top: 30px;
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    .fleft-logo img {
+        width: 30%;
+    }
+
+    .fleft-text {
+        margin-top: 8px;
+    }
+
+    .fleft-text p {
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 18px;
+    }
+
+    .footer-right {
+        margin-top: 32px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 20px;
+        color: #66667A;
+        letter-spacing: 15px;
+    }
+
+    .f-bottem {
+        padding-bottom: 5px;
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 10px;
+    } */
+
+}

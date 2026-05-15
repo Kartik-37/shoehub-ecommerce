@@ -1,0 +1,1051 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  background-color: whitesmoke;
+}
+ 
+/* Navbar  */
+.nav{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.nav a:hover{
+    opacity: 0.4;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+}
+
+.nav-left{
+     margin-top: 17px;
+     margin-left: 10px;
+     display: flex;
+}
+
+.nav-left a img{
+    width: 100%;
+    height: 45px;
+}
+
+
+.nav-right{
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+.nav-right a{
+
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.bar-icon {
+    display: none;
+}
+.gym-header{
+    background-image: url("../static/image/Catagary page/header/running-img.webp");
+    filter: grayscale(20%);
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.gymh-text h2{
+    padding-top: 100px;
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* middel */
+
+.middel{ 
+    margin-top: 3%;
+}
+
+.shoe-catagery {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    gap: 80px;
+}
+
+.shoe-catagery img {
+    /* border: 1px solid gray; */
+    width: 90%;
+    box-shadow: 0 2px 8px rgb(75, 75, 75);
+}
+
+.shoe-catagery h2 {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.gym {
+    background-image: url('../static/image/catagary/gym.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    padding: 50px 150px 0 20px;
+    box-shadow: 0 2px 8px rgb(75, 75, 75);
+}
+
+.hiking {
+    background-image: url('../static/image/catagary/hiking.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    padding: 50px 150px 0 20px;
+    box-shadow: 0 2px 8px rgb(75, 75, 75);
+}
+
+.working {
+    background-image: url('../static/image/catagary/work.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    padding: 50px 150px 0 20px;
+    box-shadow: 0 2px 8px rgb(75, 75, 75);
+}
+
+.chukks {
+    background-image: url('../static/image/catagary/chukks.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    padding: 50px 110px 0 20px;
+    box-shadow: 0 2px 8px rgb(75, 75, 75);
+}
+
+/* shoe-list */
+
+.shoe-list
+{
+    margin: 5% 5% 0 5%;
+    padding-top: 3%;
+    border-top: 1px solid #e4e4e4;
+}
+
+.shoel-tital h2 {
+    font-size:48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px; 
+    margin-bottom: 3%;
+}
+
+.shoe-row1{
+     display: flex;
+     flex-wrap: wrap;
+     gap: 30px;
+}
+
+.shoe-l2,.shoe-l3,.shoe-l4{
+    margin-left: 45px;
+}
+
+.sl-img img{
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 2px 8px rgb(122, 122, 122);
+}
+
+.sl-text{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.sl-name h2{
+    letter-spacing: 0;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 0 10px;
+    margin-left: 20px;
+    margin-right: 0px;
+    width: 90%;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.sl-pri{
+       display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+}
+
+.sl-pri p{
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+.sl-pri i{
+    font-size: 27px;
+}
+
+.shoe-row2{
+    margin-top: 4%;
+    display: flex;
+}
+.shoe-row3{
+    margin-top: 4%;
+    display: flex;
+}
+
+/* footer */
+.footer {
+    background-color: white;
+    margin-top: 3%;
+}
+
+.f-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 5%;
+    gap: 40px;
+}
+
+.footer-left {
+    width: 25%;
+}
+
+.footer-center1 {
+    width: 20%;
+}
+
+.footer-right {
+    width: 20%;
+}
+
+.fleft-logo img {
+    width: 35%;
+}
+
+.fleft-text {
+    margin-top: 20px;
+}
+
+.fleft-text p {
+    font-size: 18px;
+    color: #66667A;
+    line-height: 1.5;
+}
+
+.fcenter1-text h2,
+.fright-text h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid gray;
+}
+
+.fcenter1-text p {
+    line-height: 1.8;
+    font-size: 18px;
+    color: #66667A;
+    font-weight: 500;
+}
+
+.footer-right {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.footer-center1 {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.fright-icon {
+    display: flex;
+    gap: 15px;
+}
+
+.fright-icon i {
+    font-size: 25px;
+    color: #66667A;
+}
+
+.f-bottem {
+    margin-top: 20px;
+    border-top: 1px solid rgb(163, 163, 163);
+    padding: 10px;
+}
+
+.f-bottem p {
+    text-align: center;
+    font-size: 18px;
+    color: #66667A;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .f-top{
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-center1,
+    .footer-right{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+
+    .nav {
+        height: 40px;
+    }
+
+    .nav-left {
+        margin-top: 6px;
+        margin-left: 7px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 25px;
+    }
+
+    .nav-right {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .nav-right a {
+        font-size: 15px;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .bar-icon {
+        padding: 7px;
+        display: block;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+     .gym-header{
+        height: 80px;
+    }
+    .gymh-text h2{
+    padding-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    }
+
+    /* shoe-catagery */
+
+    .shoe-catagery {
+        gap: 5px;
+    }
+
+    .shoe-catagery h2 {
+        font-size: 7px;
+        font-weight: 600;
+    }
+
+    .gym {
+        height: 80px;
+        padding: 10px 12px 0 10px;
+    }
+
+    .hiking {
+        height: 80px;
+        padding: 10px 12px 0 10px;
+    }
+
+    .working {
+        height: 80px;
+        padding: 10px 12px 0 10px;
+    }
+
+    .chukks {
+        height: 80px;
+        padding: 10px 4px 0 10px;
+    }
+    /* shoe-list */
+    .shoe-list{
+        margin: 5% 5% 0 5%;
+    }
+
+    .shoel-tital h2{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .shoe-row1{
+        gap: 10px;
+    }
+
+    .sl-img img{
+        width: 90%;
+        height: 86px;
+    }
+    .sl-text{
+        margin-top: 10px;
+        width: 80%;
+    }
+    .sl-name h2{
+        font-size: 7px;
+        padding: 0 0 5px;
+        margin-left: 1px;
+        width: 100%;
+    }
+
+    .sl-pri p{
+        margin: 0;
+        font-size: 8px;
+    }
+    .sl-pri i{
+        margin: 0;
+        font-size: 8px;
+    }
+    /* footer
+    .footer-left {
+        margin-top: 15px;
+        margin-left: 2%;
+        width: 20%;
+    }
+
+    .fleft-logo img {
+        width: 100%;
+    }
+
+    .fleft-text {
+        margin-top: 5px;
+    }
+
+    .fleft-text p {
+        font-size: 6px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 11px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 10px;
+    }
+
+    .footer-right {
+        margin-top: 20px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 11px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 12px;
+        color: #66667A;
+        letter-spacing: 5px;
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 8px;
+    } */
+
+}
+
+@media only screen and (min-width:481px) and (max-width:768px) {
+
+    .nav {
+        height: 40px;
+    }
+
+    .nav-left {
+        margin-top: 6px;
+        margin-left: 7px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 25px;
+    }
+
+    .nav-right {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .nav-right a {
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .bar-icon {
+        padding: 7px;
+        display: block;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+     .gym-header{
+        height: 90px;
+    }
+    .gymh-text h2{
+        padding-top: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* shoe-catagery */
+
+    .shoe-catagery {
+        gap: 10px;
+    }
+
+    .shoe-catagery h2 {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .gym {
+        height: 100px;
+        padding: 10px 12px 0 10px;
+    }
+
+    .hiking {
+        height: 100px;
+        padding: 10px 12px 0 10px;
+    }
+
+    .working {
+        height: 100px;
+        padding: 10px 12px 0 10px;
+    }
+
+    .chukks {
+        height: 100px;
+        padding: 10px 4px 0 10px;
+    }
+
+    /* shoe-list */
+    .shoe-list{
+        margin: 5% 5% 0 5%;
+    }
+
+    .shoel-tital h2{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .shoe-row1{
+        gap: 15px;
+    }
+    .shoe-l2,.shoe-l3,.shoe-l4{
+        margin-left: 10px;
+    }
+    .sl-img img{
+        width: 100%;
+        height: 90px;
+    }
+    .sl-text{
+        margin-top: 10px;
+        width: 96%;
+    }
+    .sl-name h2{
+        font-size: 8px;
+        padding: 0 0 5px;
+        margin-left: 1px;
+        width: 100%;
+    }
+
+    .sl-pri p{
+        margin: 0;
+        font-size: 8px;
+    }
+    .sl-pri i{
+        margin: 0;
+        font-size: 8px;
+    }
+
+    /* footer
+    .footer-left {
+        margin-top: 15px;
+        margin-left: 5%;
+        width: 20%;
+    }
+
+    .fleft-logo img {
+        width: 100%;
+    }
+
+    .fleft-text {
+        margin-top: 8px;
+    }
+
+    .fleft-text p {
+        font-size:8px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 13px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 10px;
+    }
+
+    .footer-right {
+        margin-top: 32px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 13px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 13px;
+        color: #66667A;
+        letter-spacing: 5px;
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 11px;
+    } */
+
+}
+
+@media only screen and (min-width:769px) and (max-width:1024px) {
+
+    .nav {
+        height: 40px;
+    }
+
+    .nav-left {
+        margin-top: 6px;
+        margin-left: 7px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 25px;
+    }
+
+    .nav-right {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .nav-right a {
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .bar-icon {
+        padding: 7px;
+        display: block;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+       .gym-header{
+        height: 130px;
+    }
+    .gymh-text h2{
+        padding-top: 40px;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+
+    /* shoe-catagery */
+
+    .shoe-catagery {
+        gap: 10px;
+    }
+
+    .shoe-catagery h2 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .gym {
+        height: 150px;
+        padding: 10px 12px 0 10px;
+    }
+
+    .hiking {
+        height: 150px;
+        padding: 10px 12px 0 10px;
+    }
+
+    .working {
+        height: 150px;
+        padding: 10px 12px 0 10px;
+    }
+
+    .chukks {
+        height: 150px;
+        padding: 10px 4px 0 10px;
+    }
+
+    /* shoe-list */
+    .shoe-list{
+        margin: 5% 5% 0 5%;
+    }
+
+    .shoel-tital h2{
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .shoe-row1{
+        gap: 20px;
+    }
+    .sl-img img{
+        width: 100%;
+        height: 150px;
+    }
+    .sl-text{
+        margin-top: 10px;
+        width: 95%;
+    }
+    .sl-name h2{
+        font-size: 13px;
+        padding: 0 0 5px;
+        margin-left: 1px;
+        width: 100%;
+    }
+
+    .sl-pri p{
+        margin: 0;
+        font-size: 13px;
+    }
+    .sl-pri i{
+        margin: 0;
+        font-size: 13px;
+    }
+
+    /* footer
+    .footer-left {
+        margin-top: 30px;
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    .fleft-logo img {
+        width: 40%;
+    }
+
+    .fleft-text {
+        margin-top: 8px;
+    }
+
+    .fleft-text p {
+        font-size:13px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 14px;
+    }
+
+    .footer-right {
+        margin-top: 32px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 16px;
+        color: #66667A;
+        letter-spacing: 10px;
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 13px;
+    } */
+
+}
+
+@media only screen and (min-width:1025px) and (max-width:1200px) {
+
+    .nav {
+        height: 50px;
+    }
+
+    .nav-left {
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+
+    .nav-left a img {
+        width: 85%;
+        height: 35px;
+    }
+    .nav-right {
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    .nav-right a {
+        font-size: 18px;
+    }
+       .gym-header{
+        height: 180px;
+    }
+    .gymh-text h2{
+        padding-top: 60px;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* shoe-catagery */
+
+    .shoe-catagery {
+        gap: 18px;
+    }
+
+    .shoe-catagery h2 {
+        font-size: 22px;
+        font-weight: 600;
+        width: 30%;
+    }
+
+    .gym {
+        height: 200px;
+        padding: 10px 35px 0 10px;
+    }
+
+    .hiking {
+        height: 200px;
+        padding: 10px 35px 0 10px;
+    }
+
+    .working {
+        height: 200px;
+        padding: 10px 35px 0 10px;
+    }
+
+    .chukks {
+        height: 200px;
+        padding: 10px 5px 0 10px;
+    }
+
+     /* shoe-list */
+    .shoe-list{
+        margin: 5% 5% 0 5%;
+    }
+
+    .shoel-tital h2{
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .shoe-row1{
+        gap: 30px;
+    }
+    .sl-img img{
+        width: 100%;
+        height: 200px;
+    }
+    .sl-text{
+        margin-top: 10px;
+        width: 98%;
+    }
+    .sl-name h2{
+        font-size: 17px;
+        padding: 0 0 5px;
+        margin-left: 1px;
+        width: 100%;
+    }
+
+    .sl-pri p{
+        margin: 0;
+        font-size: 17px;
+    }
+    .sl-pri i{
+        margin: 0;
+        font-size: 17px;
+    }
+
+    /* footer */
+    /* .footer-left {
+        margin-top: 30px;
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    .fleft-logo img {
+        width: 30%;
+    }
+
+    .fleft-text {
+        margin-top: 8px;
+    }
+
+    .fleft-text p {
+        font-size:15px;
+        text-align: justify;
+    }
+
+    .footer-center1 {
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .fcenter1-text h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fcenter1-text p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: 18px;
+    }
+
+    .footer-right {
+        margin-top: 32px;
+        margin-left: 5%;
+    }
+
+    .fright-text h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    .fright-icon i {
+        font-size: 20px;
+        color: #66667A;
+        letter-spacing: 15px;
+    }
+
+    .f-bottem p {
+        text-align: center;
+        font-size: 18px;
+    } */
+
+}
