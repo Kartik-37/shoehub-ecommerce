@@ -1,0 +1,370 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../static/detail.css">
+    <title>Shoe Hub</title>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="nav">
+                <div class="nav-left">
+                    <a href="{%url 'home'%}"><img src="{% static 'image/logo/Logo2.png' %}" alt=""></a>
+                </div>
+
+                <div class="nav-right"  id="nav-right">
+                    <a href="{%url 'home'%}">Home</a>
+                    <a href="{% url 'man'%}">Men</a>
+                    <a href="{% url 'women'%}">Women</a>
+                    <a href="{% url 'kid'%}">Kids</a>
+                    <a href="{% url 'about'%}">About</a>
+                    <a href="{% url 'contact'%}">Contact</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'logout_view'%}">Logout</a>
+                    <a href="{% url 'account'%}"><i class="fa-solid fa-user"></i></a>
+                    <a href="{% url 'cart'%}"><i class="fa-solid fa-cart-shopping"></i></a>
+                {% else %}
+                      <a href="{% url 'register'%}">Login/Register</a>
+                {% endif %}
+                </div>
+                 <div class="bar-icon" onclick="bar()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="middel">
+
+            <div class="shoe-detail">
+                {% for i in data %}
+                <div class="shoed-left">
+
+                    <div class="img-top">
+                        <div class="i1">
+                            <img src="../static/image/detail/{{i.image1.url}}" alt="">
+                        </div>
+                        <div class="i1">
+                            <img src="../static/image/detail/{{i.image2.url}}" alt="">
+                        </div>
+                    </div>
+                    <div class="img-middel">
+                        <div class="i1">
+                            <img src="../static/image/detail/{{i.image3.url}}" alt="">
+                        </div>
+                        <div class="i1">
+                            <img src="../static/image/detail/{{i.image4.url}}" alt="">
+                        </div>
+                    </div>
+                    <div class="img-bottem">
+                        <div class="i1 l2">
+                            <img src="../static/image/detail/{{i.image5.url}}" alt="">
+                        </div>
+                        <div class="i1">
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="shoed-right">
+                    <div class="title-p">
+                        <h2>{{i.name}}</h2>
+                        <p>₹{{i.price}}</p>
+                    </div>
+
+                    <!-- size -->
+                    <div class="size">
+                        <h2>Size</h2>
+                        <span>{{i.size1}}</span>
+                        <span>{{i.size2}}</span>
+                        <span>{{i.size3}}</span>
+                        <span>{{i.size4}}</span>
+                        <span>{{i.size5}}</span>
+                    </div>
+
+                    <!-- width -->
+                    <div class="width">
+                        <h2>Width</h2>
+                        <span>{{i.width1}}</span>
+                        <span>{{i.width2}}</span>
+                        <span>{{i.width3}}</span>
+                        <span>{{i.width4}}</span>
+                    </div>
+
+                    <!-- add to cart -->
+                    <div class="cart">
+                        <a href="{% url 'cart1' i.id %}"><button>Add To Cart</button></a>
+                    </div>
+
+                    <!-- description -->
+                    <div class="desc">
+                        <h2>Description</h2>
+                        <p>
+                            {{i.description}}
+                        </p>
+                    </div>
+
+                    <!-- prodect detail -->
+                    <div class="pd">
+                        <h2>Product Details</h2>
+                        <ul>
+                            <li>{{i.pdetail1}}</li>
+                            <li>{{i.pdetail2}}</li>
+                            <li>{{i.pdetail3}}</li>
+                            <li>{{i.pdetail4}}</li>
+                            <li>{{i.pdetail5}}</li>
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- slider -->
+            <div class="sli">
+                <div class="tr-row">
+                    <div class="section-title">
+                        <h2>You may also like</h2>
+                        <div class="arrow-buttons">
+                            <button id="prev-tr">&#8592;</button>
+                            <button id="next-tr">&#8594;</button>
+                        </div>
+                    </div>
+
+                    <div class="slider-wrapper">
+                        <div class="lat-slider" id="watchSlider-tr">
+                            {% for i in loop %}
+                            <a href="{% url 'detail' i.id %}">
+                                <div class="lat-card">
+                                    <img src="../static/image/detail/{{i.image1.url}}" alt="zapatos dg mercadolibre">
+                                    <h3>{{i.name}}</h3>
+                                    <div class="lat-pri">
+                                        <p>₹{{i.price}}</p>
+                                        <a href="{% url 'cart1' i.id %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </div>
+                                </div>
+                            </a>
+                            {% endfor %}
+
+                            <!-- <a href="">
+                                <div class="lat-card">
+                                    <img src="{% static 'image/latest/lat2.webp' %}" alt="Lindley">
+                                    <h3>Blucher shoe</h3>
+                                    <div class="lat-pri">
+                                        <p>₹66,433</p>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="lat-card">
+                                    <img src="{% static 'image/latest/lat3.webp' %}" alt="Balfour">
+                                    <h3>men's harpoon 2 eye boot</h3>
+                                    <div class="lat-pri">
+                                        <p>₹11,498</p>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="lat-card">
+                                    <img src="{% static 'image/latest/lat4.webp' %}" alt="Arber">
+                                    <h3>Brogue shoe</h3>
+                                    <div class="lat-pri">
+                                        <p>₹11,412</p>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="lat-card">
+                                    <img src="{% static 'image/latest/lat5.webp' %}" alt="Forrest">
+                                    <h3>Ballet shoe</h3>
+                                    <div class="lat-pri">
+                                        <p>₹17,034</p>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="lat-card">
+                                    <img src="{% static 'image/latest/lat6.webp' %}" alt="Forrest">
+                                    <h3>Roger Dubuis</h3>
+                                    <div class="lat-pri">
+                                        <p>₹23,422</p>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="lat-card">
+                                    <img src="{% static 'image/latest/lat7.webp' %}" alt="Forrest">
+                                    <h3>Fashion boot</h3>
+                                    <div class="lat-pri">
+                                        <p>₹34,068</p>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="lat-card">
+                                    <img src="{% static 'image/latest/lat8.webp' %}" alt="Forrest">
+                                    <h3>Elevator shoes</h3>
+                                    <div class="lat-pri">
+                                        <p>33,131</p>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </a> -->
+
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+            <div class="f-top">
+
+                <div class="footer-left">
+                    <div class="fleft-logo">
+                        <img src="{% static 'image/logo/Logo2.png' %}" alt="">
+                    </div>
+                    <div class="fleft-text">
+                        <p>Welcome to our store, where we pride ourselves on providing exceptional products and
+                            unparalleled customer service our store is a haven for those who appreciate quality, style,
+                            and innovation.</p>
+                    </div>
+                </div>
+
+                <div class="footer-center1">
+                    <div class="fcenter1-text">
+                        <h2>Quick Links</h2>
+                        <a href="{% url 'home'%}">
+                            <p>Home</p>
+                        </a>
+                        <a href="{% url 'man'%}">
+                            <p>Men</p>
+                        </a>
+                        <a href="{% url 'women'%}">
+                            <p>Women</p>
+                        </a>
+                        <a href="{% url 'kid'%}">
+                            <p>Kid</p>
+                        </a>
+                        <a href="{% url 'about'%}">
+                            <p>About</p>
+                        </a>
+                        <a href="{% url 'contact'%}">
+                            <p>Contact</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-center1">
+                    <div class="fcenter1-text">
+                        <h2>Categories</h2>
+                        <a href="{% url 'gym sneakers'%}">
+                            <p>Gym Sneakers</p>
+                        </a>
+                        <a href="{% url 'hike sneakers'%}">
+                            <p>Hike Sneakers</p>
+                        </a>
+                        <a href="{% url 'work sneakers'%}">
+                            <p>Work Sneakers</p>
+                        </a>
+                        <a href="{% url 'chuck sneakers'%}">
+                            <p>Running Sneakers</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="fright-text">
+                        <h2>Follow us</h2>
+                        <div class="fright-icon">
+                            <div class="fi"><a href="">
+                                    <p><i class="fa-brands fa-instagram"></i></p>
+                                </a></div>
+                            <div class="fi"> <a href="">
+                                    <p><i class="fa-brands fa-x-twitter"></i></p>
+                                </a></div>
+                            <div class="fi"><a href="">
+                                    <p><i class="fa-brands fa-youtube"></i></p>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="f-bottem">
+                <p>© 2025 Shoe Hub India. All Rights Reserved.</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- slider script -->
+    <script>
+        function setupSlider(sliderId, nextBtnId, prevBtnId) {
+            const slider = document.getElementById(sliderId);
+            const next = document.getElementById(nextBtnId);
+            const prev = document.getElementById(prevBtnId);
+            const cardWidth = 270;
+
+            next.addEventListener("click", () => {
+                if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - cardWidth) {
+                    slider.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                }
+            });
+
+            prev.addEventListener("click", () => {
+                if (slider.scrollLeft <= 0) {
+                    slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+                } else {
+                    slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                }
+            });
+        }
+
+        setupSlider("watchSlider-tr", "next-tr", "prev-tr");
+        setupSlider("watchSlider-fr", "next-fr", "prev-fr");
+    </script>
+    <!-- nav-bar -->
+    <script>
+        function bar() {
+            const navRight = document.getElementById("nav-right");
+            navRight.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

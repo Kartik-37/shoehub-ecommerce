@@ -1,0 +1,402 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Bootstrap 5 css -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../static/chuck.css">
+    <title>Running Sneakers</title>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="nav">
+                <div class="nav-left">
+                    <a href="{%url 'home'%}"><img src="{% static 'image/logo/Logo2.png' %}" alt=""></a>
+                </div>
+
+                <div class="nav-right" id="nav-right"> 
+                    <a href="{%url 'home'%}">Home</a>
+                    <a href="{% url 'man'%}">Men</a>
+                    <a href="{% url 'women'%}">Women</a>
+                    <a href="{% url 'kid'%}">Kids</a>
+                    <a href="{% url 'about'%}">About</a>
+                    <a href="{% url 'contact'%}">Contact</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'logout_view'%}">Logout</a>
+                    <a href="{% url 'account'%}"><i class="fa-solid fa-user"></i></a>
+                    <a href="{% url 'cart'%}"><i class="fa-solid fa-cart-shopping"></i></a>
+                {% else %}
+                      <a href="{% url 'register'%}">Login/Register</a>
+                {% endif %}
+                </div>
+                 <div class="bar-icon" onclick="bar()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+             <div class="gym-header">
+                    <div class="gymh-text">
+                        <h2>Running Sneakers</h2>
+
+                    </div>
+                </div>
+        </div>
+
+        <div class="middel">
+
+            <div class="shoe-catagery">
+                <a href="{% url 'gym sneakers'%}">
+                <div class="gym">
+                    <div class="cat-text1"><h2>GYM sneakers</h2></div>
+                </div>
+                </a>
+                <a href="{% url 'hike sneakers'%}">
+                <div class="hiking">
+                    <div class="cat-text2"><h2>hike sneakers</h2></div>
+                </div>
+                </a>
+                <a href="{% url 'work sneakers'%}">
+                <div class="working">
+                    <div class="cat-text3"><h2>work sneakers</h2></div>
+                </div>
+                </a>
+                <a href="{% url 'chuck sneakers'%}">
+                <div class="chukks">
+                    <div class="cat-text4"><h2>Running sneakers</h2></div>
+                </div>
+                </a>    
+            </div>
+
+            <div class="shoe-list">
+                <div class="shoel-tital">
+                    <h2>Running Sneakers</h2>
+                </div>
+
+                <!-- ROW-1 -->
+
+                <div class="shoe-row1">
+                    {% for i in data %}
+                    <div class="shoe-l1">
+                        <a href="{% url 'detail' i.id %} "> 
+                            <div class="sl-img">
+                                <img src="../static/image/detail/{{i.image1.url}}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="{% url 'detail' i.id %} ">
+                                <div class="sl-name">
+                                    <h2>{{i.name}}</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹{{i.price}}</p></div>
+                                <div class="sl-p2"><a href="{% url 'cart1' i.id %}"><i class="fa-solid fa-cart-shopping"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <!-- <div class="shoe-l2">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Catagary page/shoe-list/r-img2.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>FuelCell Rebel v4</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹9,308</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-l3">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Catagary page/shoe-list/r-img3.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>Fresh Foam X 880v15</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹11,870</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-l4">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Catagary page/shoe-list/r-img4.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>FuelCell SuperComp Elite v4</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹21,264</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+
+                 <!-- ROW-2 -->
+
+                <!-- <div class="shoe-row2">
+
+                    <div class="shoe-l1">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Catagary page/shoe-list/r-img5.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>FuelCell Rebel v4</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹9,308</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-l2">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Catagary page/shoe-list/r-img6.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>Fresh Foam X 880v15</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹11,870</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-l3">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Catagary page/shoe-list/r-img7.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>Fresh Foam X 860v14</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹11,870</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-l4">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Catagary page/shoe-list/r-img8.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>Fresh Foam X Hierro v9</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹13,151</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+
+                 <!-- ROW-3 -->
+
+                <!-- <div class="shoe-row3">
+
+                    <div class="shoe-l1">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Catagary page/shoe-list/r-img9.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>Fresh Foam X 1080v14</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹9,308</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-l2">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Catagary page/shoe-list/r-img10.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>Fresh Foam X Hierro v8</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹14,393</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-l3">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Hike-sneker/shoe-list/h-img1.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>Kid 550</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹8,005</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-l4">
+                        <a href=""> 
+                            <div class="sl-img">
+                                <img src="{% static 'image/Hike-sneker/shoe-list/h-img1.webp' %}" alt="">
+                            </div>
+                        </a>
+                        <div class="sl-text">
+                            <a href="">
+                                <div class="sl-name">
+                                    <h2>Kid 2002</h2>
+                                </div>
+                            </a>
+                            <div class="sl-pri">
+                                <div class="sl-p1"><p>₹8,431</p></div>
+                                <div class="sl-p2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+
+    <div class="f-top">
+
+        <div class="footer-left">
+        <div class="fleft-logo">
+            <img src="{% static 'image/logo/Logo2.png' %}" alt="">
+        </div>
+        <div class="fleft-text">
+            <p>Welcome to our store, where we pride ourselves on providing exceptional products and unparalleled customer service our store is a haven for those who appreciate quality, style, and innovation.</p>
+        </div>
+    </div>
+
+    <div class="footer-center1">
+        <div class="fcenter1-text">
+            <h2>Quick Links</h2>
+           <a href="{% url 'home'%}"><p>Home</p></a>
+            <a href="{% url 'man'%}"><p>Men</p></a>
+            <a href="{% url 'women'%}"><p>Women</p></a>
+            <a href="{% url 'kid'%}"><p>Kid</p></a>
+            <a href="{% url 'about'%}"><p>About</p></a>
+            <a href="{% url 'contact'%}"><p>Contact</p></a>    
+        </div>
+    </div>
+
+    <div class="footer-center1">
+        <div class="fcenter1-text">
+            <h2>Categories</h2>
+          <a href="{% url 'gym sneakers'%}"><p>Gym Sneakers</p></a>
+            <a href="{% url 'hike sneakers'%}"><p>Hike Sneakers</p></a>
+            <a href="{% url 'work sneakers'%}"><p>Work Sneakers</p></a>
+            <a href="{% url 'chuck sneakers'%}"><p>Running Sneakers</p></a>
+        </div>  
+    </div>
+
+    <div class="footer-right">
+        <div class="fright-text">
+            <h2>Follow us</h2>
+            <div class="fright-icon">
+                <div class="fi"><a href=""><p><i class="fa-brands fa-instagram"></i></p></a></div>
+                <div class="fi"> <a href=""><p><i class="fa-brands fa-x-twitter"></i></p></a></div>
+                <div class="fi"><a href=""><p><i class="fa-brands fa-youtube"></i></p></a></div>
+            </div> 
+        </div>
+    </div>
+    </div> 
+
+    <div class="f-bottem">
+        <p>© 2025 Shoe Hub India. All Rights Reserved.</p>
+    </div>
+
+ </div>
+    
+ </div>
+
+    </div>
+<!-- nav-bar -->
+      <script>
+        function bar() {
+            const navRight = document.getElementById("nav-right");
+            navRight.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

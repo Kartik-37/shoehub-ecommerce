@@ -1,0 +1,235 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../static/payment.css">
+    <title>Shoe Hub</title>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="nav">
+                <div class="nav-left">
+                    <a href="{%url 'home'%}"><img src="{% static 'image/logo/Logo2.png' %}" alt=""></a>
+                </div>
+
+                <div class="nav-right" id="nav-right">
+                    <a href="{% url 'man'%}">Men</a>
+                    <a href="{% url 'women'%}">Women</a>
+                    <a href="{% url 'kid'%}">Kids</a>
+                    <a href="{% url 'about'%}">About</a>
+                    <a href="{% url 'contact'%}">Contact</a>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logout_view'%}">Logout</a>
+                    <a href="{% url 'account'%}"><i class="fa-solid fa-user"></i></a>
+                    <a href="{% url 'cart'%}"><i class="fa-solid fa-cart-shopping"></i></a>
+                    {% else %}
+                    <a href="{% url 'register'%}">Login/Register</a>
+                    {% endif %}
+                </div>
+                <div class="bar-icon" onclick="bar()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="middel">
+
+            <div class="delivery">
+                <div class="del-titel">
+                    <h2>Delivery</h2>
+                </div>
+                <form action="{% url 'payment'%}" method="post">
+                    {% csrf_token %}
+                    <div class="flname">
+                        <div class="frname">
+                            <p>First Name</p>
+                            <input type="text" name="fname" placeholder="First Name" id="firstname">
+                        </div>
+                        <div class="lsname">
+                            <p>Last Name</p>
+                            <input type="text" name="lname" placeholder="Last Name" id="">
+                        </div>
+                    </div>
+
+                    <div class="addr">
+                        <p>Address</p>
+                        <textarea name="address" id="" placeholder="Address"></textarea>
+                    </div>
+
+                    <div class="csp">
+                        <div class="city">
+                            <p>City</p>
+                            <input type="text" name="city" placeholder="City">
+                        </div>
+                        <div class="state">
+                            <p>State</p>
+                            <input type="text" name="state" placeholder="State">
+                        </div>
+                        <div class="pincode">
+                            <p>Pincode</p>
+                            <input type="tel" name="pincode" id="" placeholder="382545" maxlength="6">
+                        </div>
+                    </div>
+                    <div class="phone">
+                        <p>Phone No</p>
+                        <input type="tel" name="phone" id="" placeholder="Phone No" maxlength="10">
+                    </div>
+                    <div class="pay-titel">
+                        <h2>Payment</h2>
+                    </div>
+
+                    <div class="cname">
+                        <p>Name on card</p>
+                        <input type="text" name="cname" placeholder="Name on card">
+                    </div>
+                    <div class="expcode">
+                        <div class="exp">
+                            <p>Expiration date</p>
+                            <input type="text" name="expdate" placeholder="Expiration date (MM/YY)" maxlength="5">
+                        </div>
+                        <div class="code">
+                            <p>CVV</p>
+                            <input type="tel" name="cvv" id="" placeholder="CVV" maxlength="3">
+                        </div>
+                    </div>
+                    <div class="cardno">
+                        <p>Card Number</p>
+                        <input type="tel" name="cardno" id="" placeholder="Card Number" maxlength="12">
+                    </div>
+                    <div class="paybut">
+                        <a href=""><button>Pay Now</button></a>
+                        <p>OR</p>
+                        <a href=""><button>Case on delivery</button></a>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer">
+
+            <div class="f-top">
+
+                <div class="footer-left">
+                    <div class="fleft-logo">
+                        <img src="{% static 'image/logo/Logo2.png' %}" alt="">
+                    </div>
+                    <div class="fleft-text">
+                        <p>Welcome to our store, where we pride ourselves on providing exceptional products and
+                            unparalleled customer service our store is a haven for those who appreciate quality, style,
+                            and innovation.</p>
+                    </div>
+                </div>
+
+                <div class="footer-center1">
+                    <div class="fcenter1-text">
+                        <h2>Quick Links</h2>
+                        <a href="{% url 'home'%}">
+                            <p>Home</p>
+                        </a>
+                        <a href="{% url 'man'%}">
+                            <p>Men</p>
+                        </a>
+                        <a href="{% url 'women'%}">
+                            <p>Women</p>
+                        </a>
+                        <a href="{% url 'kid'%}">
+                            <p>Kid</p>
+                        </a>
+                        <a href="{% url 'about'%}">
+                            <p>About</p>
+                        </a>
+                        <a href="{% url 'contact'%}">
+                            <p>Contact</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-center1">
+                    <div class="fcenter1-text">
+                        <h2>Categories</h2>
+                        <a href="{% url 'gym sneakers'%}">
+                            <p>Gym Sneakers</p>
+                        </a>
+                        <a href="{% url 'hike sneakers'%}">
+                            <p>Hike Sneakers</p>
+                        </a>
+                        <a href="{% url 'work sneakers'%}">
+                            <p>Work Sneakers</p>
+                        </a>
+                        <a href="{% url 'chuck sneakers'%}">
+                            <p>Running Sneakers</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="fright-text">
+                        <h2>Follow us</h2>
+                        <div class="fright-icon">
+                            <div class="fi"><a href="">
+                                    <p><i class="fa-brands fa-instagram"></i></p>
+                                </a></div>
+                            <div class="fi"> <a href="">
+                                    <p><i class="fa-brands fa-x-twitter"></i></p>
+                                </a></div>
+                            <div class="fi"><a href="">
+                                    <p><i class="fa-brands fa-youtube"></i></p>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="f-bottem">
+                <p>© 2025 Shoe Hub India. All Rights Reserved.</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- bootstrap5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- nav-bar -->
+    <script>
+
+        function bar() {
+            const navRight = document.getElementById("nav-right");
+            navRight.classList.toggle("active");
+        }
+    </script>
+
+
+
+</body>
+
+</html>
