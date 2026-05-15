@@ -56,7 +56,7 @@
                 {% for i in data %}
                     <tr>
                         <td>{{i.id}}</td>
-                        <td><img src="../static/image/detail/{{i.image1}}" alt=""></td>
+                        <td><img src="{% static 'image/detail/' %}{{i.image1}}" alt=""></td>
                         <td>{{i.name}}</td>
                         <td>{% for cat in i.category.all %}
                                     {{ cat.name }}

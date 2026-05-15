@@ -85,7 +85,7 @@
                         {% for i in data2 %}
                         <div class="prod-bot">
                             <div class="pimg">
-                                <img src="../static/image/detail/{{i.image}}" alt="">
+                                <img src="{% static 'image/detail/' %}{{i.image}}" alt="">
                             </div>
                             <div class="prod-name">
                                 <p>{{i.name}}</p>

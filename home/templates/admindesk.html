@@ -76,7 +76,7 @@
                 {% for i in data4 %}
                     <tr>
                         <td>{{i.oid}}</td>
-                        <td><img src="../static/image/detail/{{i.image}}" alt=""></td>
+                        <td><img src="{% static 'image/detail/' %}{{i.image}}" alt=""></td>
                         <td>{{i.name}}</td>
                         <td>{{i.date}}</td>
                         <!-- <td>Deleverd</td> -->
