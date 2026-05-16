@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
 from django.db.models import Max,Sum,Count
 from .models import Contact,Items,Type,Category,Cart,Account,Billing,Payment
+from django.contrib.auth.models import User
+from django.contrib import messages
 
 def index(request):
     data = Items.objects.filter(type=1)
@@ -67,16 +69,56 @@ def kid(request):
 
 def register(request):
     if request.method == "POST":
-        name = request.POST.get("name") 
-        email = request.POST.get("email") 
-        password = request.POST.get("password") 
-        sql = User.objects.create_user(username=name,email=email,password=password)
-        sql.save()
-        obj = Account(username=name,email=email)
-        obj.save()
-        return redirect ('home')
 
-    return render (request,'../templates/logregis.html')
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+
+        # Check empty fields
+        if not name or not email or not password:
+            messages.error(request, "All fields are required")
+            return redirect('register')
+
+        # Username already exists
+        if User.objects.filter(username=name).exists():
+            messages.error(request, "Username already exists")
+            return redirect('register')
+
+        # Email already exists
+        if User.objects.filter(email=email).exists():
+            messages.error(request, "Email already exists")
+            return redirect('register')
+
+        # Create user
+        user = User.objects.create_user(
+            username=name,
+            email=email,
+            password=password
+        )
+
+        # Create account
+        Account.objects.create(
+            username=name,
+            email=email
+        )
+
+        messages.success(request, "Account created successfully")
+
+        return redirect('home')
+
+    return render(request, 'logregis.html')
+# def register(request):
+#     if request.method == "POST":
+#         name = request.POST.get("name") 
+#         email = request.POST.get("email") 
+#         password = request.POST.get("password") 
+#         sql = User.objects.create_user(username=name,email=email,password=password)
+#         sql.save()
+#         obj = Account(username=name,email=email)
+#         obj.save()
+#         return redirect ('home')
+
+#     return render (request,'../templates/logregis.html')
 
 def login_view(request):
     if request.method == "POST":
