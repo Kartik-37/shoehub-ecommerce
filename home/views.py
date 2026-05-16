@@ -5,7 +5,9 @@ from django.contrib.auth import authenticate,login
 from django.db.models import Max,Sum,Count
 from .models import Contact,Items,Type,Category,Cart,Account,Billing,Payment
 from django.contrib.auth.models import User
-from django.contrib import messages
+from django.contrib.auth import login
+from django.shortcuts import render, redirect
+
 
 def index(request):
     data = Items.objects.filter(type=1)
@@ -74,39 +76,24 @@ def register(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
 
-        # Check empty fields
-        if not name or not email or not password:
-            messages.error(request, "All fields are required")
-            return redirect('register')
-
-        # Username already exists
-        if User.objects.filter(username=name).exists():
-            messages.error(request, "Username already exists")
-            return redirect('register')
-
-        # Email already exists
-        if User.objects.filter(email=email).exists():
-            messages.error(request, "Email already exists")
-            return redirect('register')
-
-        # Create user
         user = User.objects.create_user(
             username=name,
             email=email,
             password=password
         )
 
-        # Create account
-        Account.objects.create(
+        obj = Account(
             username=name,
             email=email
         )
+        obj.save()
 
-        messages.success(request, "Account created successfully")
+        # Automatically login user
+        login(request, user)
 
         return redirect('home')
 
-    return render(request, 'logregis.html')
+    return render(request, '../templates/logregis.html')
 # def register(request):
 #     if request.method == "POST":
 #         name = request.POST.get("name") 
