@@ -263,3 +263,304 @@ position: relative;
     }
 
 }
+
+/* =========================================
+   LARGE DESKTOP
+   1400px and above
+========================================= */
+
+@media only screen and (min-width:1400px){
+
+    .nav-right a{
+        font-size: 24px;
+        padding: 12px;
+    }
+
+    .lr{
+        margin: 5% auto;
+    }
+
+}
+
+
+/* =========================================
+   LAPTOPS & DESKTOPS
+   1024px - 1399px
+========================================= */
+
+@media only screen and (min-width:1024px) and (max-width:1399px){
+
+    .nav-right a{
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .lr{
+        margin: 5% auto;
+    }
+
+}
+
+
+/* =========================================
+   TABLETS
+   769px - 1023px
+========================================= */
+
+@media only screen and (min-width:769px) and (max-width:1023px){
+
+    /* NAVBAR */
+
+    .nav{
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .nav-left{
+        margin: 20px 0;
+    }
+
+    .nav-right{
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-right a{
+        font-size: 18px;
+        padding: 8px;
+        display: inline-block;
+    }
+
+    /* HEADER */
+
+    .log-header{
+        height: 250px;
+    }
+
+    .logh-text h2{
+        padding-top: 90px;
+        font-size: 35px;
+    }
+
+    /* LOGIN REGISTER */
+
+    .lr{
+        width: 90%;
+        max-width: 350px;
+        margin: 8% auto;
+    }
+
+    .lr-head{
+        width: 100%;
+    }
+
+    .lrbt1,
+    .lrbt2{
+        width: 49%;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+
+    .input-group{
+        width: 85%;
+    }
+
+    .l-btn,
+    .r-btn{
+        padding-left: 0;
+    }
+
+    /* FOOTER */
+
+    .f-top{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer-left,
+    .footer-center1,
+    .footer-right{
+        width: 45%;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE DEVICES
+   320px - 768px
+========================================= */
+
+@media only screen and (max-width:768px){
+
+    /* NAVBAR */
+
+    .nav{
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .nav-left{
+        margin: 10px 0;
+    }
+
+    .nav-left a img{
+        height: 40px;
+    }
+
+    .nav-right{
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-right a{
+        display: inline-block;
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    /* HEADER */
+
+    .log-header{
+        height: 220px;
+    }
+
+    .logh-text h2{
+        padding-top: 80px;
+        font-size: 28px;
+    }
+
+    /* LOGIN REGISTER */
+
+    .middel{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .lr{
+        width: 95%;
+        max-width: 350px;
+        margin: 10% auto;
+        height: 340px;
+    }
+
+    .lr-head{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .lrbt1,
+    .lrbt2{
+        width: 49%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .input-group{
+        width: 82%;
+    }
+
+    .input-field{
+        font-size: 16px;
+    }
+
+    .submit-btn{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .l-btn,
+    .r-btn{
+        padding-left: 0;
+    }
+
+    #login{
+        left: 20px;
+    }
+
+    #register{
+        left: 400px;
+    }
+
+    /* FOOTER */
+
+    .f-top{
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .footer-left,
+    .footer-center1,
+    .footer-right{
+        width: 100%;
+    }
+
+    .fleft-logo img{
+        width: 120px;
+    }
+
+    .fcenter1-text h2,
+    .fright-text h2{
+        font-size: 22px;
+    }
+
+    .fcenter1-text p,
+    .fleft-text p,
+    .f-bottem p{
+        font-size: 16px;
+    }
+
+    .fright-icon i{
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE DEVICES
+   320px - 480px
+========================================= */
+
+@media only screen and (max-width:480px){
+
+    .nav-right a{
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .logh-text h2{
+        font-size: 24px;
+    }
+
+    .lr{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .input-group{
+        width: 80%;
+    }
+
+    .lrbt1,
+    .lrbt2{
+        font-size: 14px;
+    }
+
+    .submit-btn{
+        font-size: 15px;
+    }
+
+    .fleft-text p,
+    .fcenter1-text p,
+    .f-bottem p{
+        font-size: 15px;
+    }
+
+}
