@@ -1,14 +1,16 @@
 # 👟 ShoeHub — Modern Footwear E-Commerce Platform
 
-<div align="center">
+<div align="center" >
 
-<picture padding=10>
+<picture >
   <source media="(prefers-color-scheme: dark)" srcset="home/static/image/logo/Logo_White.png">
   <source media="(prefers-color-scheme: light)" srcset="home/static/image/logo/Logo2.png">
   <img alt="ShoeHub Logo" src="home/static/image/logo/Logo2.png" width="500">
 </picture>
 <br>
+<br>
 **A full-stack e-commerce web application for footwear — built with Django and deployed on Render.**
+
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-ShoeHub-blue?style=for-the-badge)](https://shoehub-ecommerce.onrender.com)
 [![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
@@ -136,10 +138,6 @@ This project is deployed on **[Render](https://render.com)** using:
 - 🌐 Live Project: [shoehub-ecommerce.onrender.com](https://shoehub-ecommerce.onrender.com)
 
 ---
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
