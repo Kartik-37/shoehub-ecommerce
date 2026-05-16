@@ -407,16 +407,16 @@ a:hover {
     }
 
     .wid-text h5{
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .wid-text h2{
-        font-size: 24px;
+        font-size: 18px;
         margin-bottom: 10px;
     }
 
     .wid-text p{
-        font-size: 12px;
+        font-size: 10px;
     }
 
 }
@@ -1464,7 +1464,7 @@ a:hover {
         left: 50px;
     } */
 
-    .wid-text h5 {
+    /* .wid-text h5 {
         font-size: 13px;
         margin-bottom: 5px;
     }
@@ -1478,7 +1478,7 @@ a:hover {
         margin-left: 70px;
         width: 80%;
         font-size: 9px;
-    }
+    } */
 
     /* best-sell */
     .best-sell {
@@ -1876,11 +1876,11 @@ a:hover {
     }
 
     /* wide */
-    .wid-text {
+    /* .wid-text {
         width: 80%;
         top: 100px;
         left: 50px;
-    }
+    } */
 
     .wid-text h5 {
         font-size: 20px;
@@ -1893,8 +1893,6 @@ a:hover {
     }
 
     .wid-text p {
-        margin-left: 180px;
-        width: 70%;
         font-size: 13px;
     }
 
@@ -2292,8 +2290,6 @@ a:hover {
     }
 
     .wid-text p {
-        margin-left: 325px;
-        width: 60%;
         font-size: 17px;
     }
 
